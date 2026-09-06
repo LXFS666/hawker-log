@@ -1,9 +1,7 @@
+import HawkerMap from './HawkerMap'
+
 function App() {
-  return (
-    <main>
-      <h1>Hawker Log</h1>
-    </main>
-  )
+  return <HawkerMap />
 }
 
 export default App
