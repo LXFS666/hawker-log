@@ -111,3 +111,163 @@ body {
   color: #b91c1c;
   font-size: 0.875rem;
 }
+
+.log-visit-fab {
+  position: absolute;
+  z-index: 1000;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+}
+
+.sheet {
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: Canvas;
+  color: CanvasText;
+  border-radius: 16px 16px 0 0;
+  padding: 1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+.sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.sheet-header h2 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.sheet-close {
+  border: none;
+  background: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.25rem;
+  color: inherit;
+}
+
+.sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.sheet-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0.5rem 0 0;
+}
+
+.sheet-body input[type='text'],
+.sheet-body input[type='date'],
+.sheet-body textarea {
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  background: Field;
+  color: FieldText;
+}
+
+.sheet-body label {
+  font-size: 0.875rem;
+}
+
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.option-button {
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+}
+
+.option-button.selected {
+  border-color: #111;
+  font-weight: 600;
+}
+
+.rating-picker {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rating-button {
+  flex: 1;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+}
+
+.rating-button.selected {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.reorder-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sheet-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.sheet-actions button {
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+}
+
+.sheet-actions button:first-child {
+  background: none;
+  border: 1px solid #ccc;
+  color: inherit;
+}
+
+.sheet-actions button:disabled {
+  opacity: 0.6;
+}

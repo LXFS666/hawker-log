@@ -5,3 +5,11 @@ export interface HawkerCentre {
   lat: number
   lng: number
 }
+
+export interface Stall {
+  id: number
+  centre_id: number
+  name: string
+  unit_no: string | null
+  cuisine: string | null
+}

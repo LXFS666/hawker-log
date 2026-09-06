@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import HawkerMap from './HawkerMap'
+import LogVisit from './LogVisit'
 import SignIn from './SignIn'
 import { supabase } from './lib/supabase'
 import { useSession } from './lib/useSession'
 
 function App() {
   const { session, loading } = useSession()
+  const [isLogging, setIsLogging] = useState(false)
 
   if (loading) {
     return null
@@ -24,6 +27,19 @@ function App() {
         Sign out
       </button>
       <HawkerMap />
+      <button
+        type="button"
+        className="log-visit-fab"
+        onClick={() => setIsLogging(true)}
+      >
+        + Log a visit
+      </button>
+      {isLogging && (
+        <LogVisit
+          onClose={() => setIsLogging(false)}
+          onSaved={() => setIsLogging(false)}
+        />
+      )}
     </div>
   )
 }
